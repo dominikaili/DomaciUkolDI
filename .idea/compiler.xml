@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="junit-opakovani" />
+        <module name="Domaci ukol Dominika Iliašová" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="junit-opakovani" target="11" />
+      <module name="Domaci ukol Dominika Iliašová" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

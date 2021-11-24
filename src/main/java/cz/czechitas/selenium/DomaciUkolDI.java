@@ -57,6 +57,7 @@ public class DomaciUkolDI {
         prijatiePodmienok();
         vytvoreniePrihlasky();
 
+        celeMenoZiaka = "Hugo Granger-Weasley";
         overeniePrihlasky();
 
     }
@@ -82,6 +83,7 @@ public class DomaciUkolDI {
         prijatiePodmienok();
         vytvoreniePrihlasky();
 
+        celeMenoZiaka = "Rose Granger-Weasley";
         overeniePrihlasky();
     }
 
@@ -97,7 +99,7 @@ public class DomaciUkolDI {
 
         odhlasenieZiakaNemoc();
 
-        overenieOdhlásenia();
+        overenieOdhlasenia();
 
 
     }
@@ -108,11 +110,13 @@ public class DomaciUkolDI {
         WebElement menoPrvehoZiaka = zoznamPrihlasiek.get(0);
 
         String menoZiaka = menoPrvehoZiaka.getText();
-        Assertions.assertEquals("Rose Granger-Weasley", menoZiaka, "Prihlaska nie je taka ako cakas");
+
+        Assertions.assertEquals(celeMenoZiaka, menoZiaka, "Meno ziaka nie je take ako cakas");
     }
 
+    String celeMenoZiaka;
 
-    private void overenieOdhlásenia() {
+    private void overenieOdhlasenia() {
         WebElement detail = prohlizec.findElement(By.xpath("//a[@class ='btn btn-sm btn-secondary' and (text()='Detail')]"));
         detail.click();
 
